@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Subject Resources</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hover-scale {
+            transition: transform 0.2s;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen text-slate-800 font-sans">
+
+    <!-- Header -->
+    <header class="bg-indigo-700 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div>
+                    <h1 class="text-3xl font-bold flex items-center gap-3">
+                        <i class="fas fa-globe-europe"></i> English Subject Resources
+                    </h1>
+                    <p class="text-indigo-100 text-sm mt-1">Vocational, Program Subject & Textbook Links</p>
+                </div>
+                
+                <!-- Search Box -->
+                <div class="relative w-full md:w-96">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </span>
+                    <input type="text" id="searchInput" onkeyup="filterTable()" 
+                           class="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-lg focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200" 
+                           placeholder="Search titles or URLs...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-8">
+
+        <!-- Info Box -->
+        <div class="bg-white border-l-4 border-indigo-600 rounded-r-lg shadow-sm p-4 mb-8">
+            <div class="flex items-start gap-3">
+                <i class="fas fa-info-circle text-indigo-600 mt-1"></i>
+                <p class="text-sm text-gray-600">
+                    This index acts as a central repository for English subject links and textbook references. URLs are displayed in raw text format for easy copying and pasting into lesson plans or documents.
+                </p>
+            </div>
+        </div>
+
+        <!-- Section 1: Vocational Grammar -->
+        <section class="mb-12 animate-fade-in">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2 border-b pb-2 border-gray-200">
+                <i class="fas fa-tools text-orange-500"></i> Vocational English (Yrkesfag) - Grammar
+            </h2>
+            <div class="overflow-x-auto shadow-md rounded-lg bg-white">
+                <table class="w-full text-left border-collapse table-fixed">
+                    <thead class="bg-gray-100 border-b border-gray-200">
+                        <tr>
+                            <th class="px-6 py-4 font-semibold text-gray-600 w-1/4">Resource Title</th>
+                            <th class="px-6 py-4 font-semibold text-gray-600 w-1/4">Topic / Type</th>
+                            <th class="px-6 py-4 font-semibold text-gray-600 w-1/2">Direct URL (Copy/Paste)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vocationalGrammarTable" class="divide-y divide-gray-100">
+                        <!-- Content injected via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 2: Vocational Communication -->
+        <section class="mb-12 animate-fade-in">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2 border-b pb-2 border-gray-200">
+                <i class="fas fa-comment-dots text-orange-500"></i> Vocational English (Yrkesfag) - Communication
+            </h2>
+            <div class="overflow-x-auto shadow-md rounded-lg bg-white">
+                <table class="w-full text-left border-collapse table-fixed">
+                    <thead class="bg-gray-100 border-b border-gray-200">
+                        <tr>
+                            <th class="px-6 py-4 font-semibold text-gray-600 w-1/4">Resource Title</th>
+                            <th class="px-6 py-4 font-semibold text-gray-600 w-1/4">Sub-Category</th>
+                            <th class="px-6 py-4 font-semibold text-gray-600 w-1/2">Direct URL (Copy/Paste)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="communicationTable" class="divide-y divide-gray-100">
+                        <!-- Content injected via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 3: English 1 (Program Subject) -->
+        <section class="mb-12 animate-fade-in">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2 border-b pb-2 border-gray-200">
+                <i class="fas fa-graduation-cap text-blue-600"></i> Engelsk Programfag (English 1)
+            </h2>
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4 text-sm text-blue-800">
+                <i class="fas fa-folder-open mr-2"></i> Includes resources from <strong>Improving Your Language</strong> and <strong>Text Development</strong>.
+            </div>
+            <div class="overflow-x-auto shadow-md rounded-lg bg-white">
+                <table class="w-full text-left border-collapse table-fixed">
+                    <thead class="bg-gray-100 border-b border-gray-200">
+                        <tr>
+                            <th class="px-6 py-4 font-semibold text-gray-600 w-1/4">Resource Title</th>
+                            <th class="px-6 py-4 font-semibold text-gray-600 w-1/4">Topic</th>
+                            <th class="px-6 py-4 font-semibold text-gray-600 w-1/2">Direct URL (Copy/Paste)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="programSubjectTable" class="divide-y divide-gray-100">
+                        <!-- Content injected via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 4: Textbook Reference -->
+        <section class="mb-12 animate-fade-in">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2 border-b pb-2 border-gray-200">
+                <i class="fas fa-book text-red-600"></i> Textbook: "Skills" - Resource Index
+            </h2>
+            <div class="bg-red-50 border border-red-200 rounded-lg p-4 mb-4 text-sm text-red-800">
+                <i class="fas fa-bookmark mr-2"></i> Page references for <strong>Improve Your Skills</strong> courses and the <strong>Language Lab</strong>.
+            </div>
+            <div class="overflow-x-auto shadow-md rounded-lg bg-white">
+                <table class="w-full text-left border-collapse table-fixed">
+                    <thead class="bg-gray-100 border-b border-gray-200">
+                        <tr>
+                            <th class="px-6 py-4 font-semibold text-gray-600 w-1/3">Topic / Skill</th>
+                            <th class="px-6 py-4 font-semibold text-gray-600 w-2/3">Page Numbers</th>
+                        </tr>
+                    </thead>
+                    <tbody id="textbookTable" class="divide-y divide-gray-100">
+                        <!-- Content injected via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>English Subject Resource Hub</p>
+        </div>
+    </footer>
+
+    <script>
+        // Data Objects
+
+        const vocationalGrammarData = [
+            // Learning Paths (Læringsstier)
+            { title: "Working with Grammar (Main Hub)", cat: "MAIN PAGE", url: "https://ndla.no/e/engelsk-yf/working-with-grammar/322e044153", highlight: true },
+            { title: "Grammar: Self-assessment", cat: "Læringssti", url: "https://ndla.no/r/engelsk-yf/grammar-self-assessment/8375216763" },
+            { title: "A/An and The (Articles)", cat: "Læringssti", url: "https://ndla.no/en/r/engelsk-sf/aan-and-the-indefinite-and-definite-articles/df68c5d8e6" },
+            { title: "Countable vs. Uncountable Nouns", cat: "Læringssti", url: "https://ndla.no/en/r/engelsk-sf/countable-vs-uncountable-nouns/12840af1a1" },
+            { title: "Verb Conjugation (Verbbøying)", cat: "Læringssti", url: "https://ndla.no/en/r/english-general-studies/verb-conjugation-verbboying/5bf4b94c4d" },
+            { title: "Concord: Choosing Correct Verb", cat: "Læringssti", url: "https://ndla.no/r/engelsk-yf/concord-choosing-the-correct-form-of-the-verb/6a04f82913" },
+            { title: "Word Order", cat: "Læringssti", url: "https://ndla.no/en/r/engelsk-yf/word-order/5f1a8a3d4f" },
+            { title: "Using the -ing Form of Verbs", cat: "Læringssti", url: "https://ndla.no/nn/r/engelsk-yf/using-the--ing-form-of-verbs/b571256e0d/8246" },
+            { title: "Adverbs", cat: "Læringssti", url: "https://ndla.no/r/engelsk-yf/adverbs/258a363f8d" },
+            { title: "Replacing Norwegian 'som'", cat: "Læringssti", url: "https://ndla.no/r/engelsk-yf/replacing-norwegian-som-relative-pronouns/9f7f4b0759" },
+            { title: "It vs. There", cat: "Læringssti", url: "https://ndla.no/en/r/engelsk-sf/it-vs-there/9eb4e7d762" },
+            
+            // Specific Subject Material (Fagstoff) & Tasks
+            { title: "Linking Words and Phrases", cat: "Fagstoff", url: "https://ndla.no/r/engelsk-sf/linking-words-and-phrases/5662e7eab7" },
+            { title: "The Indefinite Articles: A/An", cat: "Fagstoff", url: "https://ndla.no/r/engelsk-sf/aan-and-the-indefinite-and-definite-articles/df68c5d8e6/7904" },
+            { title: "Word Classes (Nouns, Verbs etc)", cat: "Fagstoff", url: "https://ndla.no/r/engelsk-yf/grammar-self-assessment/8375216763/8508" },
+            { title: "Adverbs and Adverbials", cat: "Fagstoff", url: "https://ndla.no/r/engelsk-yf/adverbsadverbials/75dd601bfc" },
+            { title: "Text Cohesion", cat: "Fagstoff", url: "https://ndla.no/r/engelsk-yf/text-cohesion/7626a885b2" },
+            { title: "Concord Tasks", cat: "Oppgaver", url: "https://ndla.no/en/r/engelsk-yf/tasks-concord/f4dc5742de" },
+            { title: "Adverb or Adjective?", cat: "Oppgaver", url: "https://ndla.no/r/engelsk-yf/adverb-or-adjective/5f2a62be34" },
+            { title: "Tasks: It or There?", cat: "Oppgaver", url: "https://ndla.no/en/r/engelsk-sf/it-vs-there/9eb4e7d762/8129" }
+        ];
+
+        const communicationData = [
+            { title: "Written & Oral Communication (Hub)", cat: "Main Topic", url: "https://ndla.no/e/engelsk-yf/written-oral-communication/0b418d8d38", highlight: true },
+            { title: "Non-Fiction & Vocational Texts Folder", cat: "Non-Fiction", url: "https://ndla.no/e/engelsk-yf/non-fiction-and-vocational-texts/186db799dc" },
+            { title: "How to Write a Five-Paragraph Essay", cat: "Writing Guide", url: "https://ndla.no/r/engelsk-yf/how-to-write-a-five-paragraph-essay/6da2e7a687" },
+            { title: "How to Write a Formal Letter", cat: "Writing Guide", url: "https://ndla.no/r/engelsk-yf/how-to-write-a-formal-letter/e570730f4d" },
+            { title: "How to Write a Project Paper", cat: "Writing Guide", url: "https://ndla.no/r/engelsk-yf/how-to-write-a-project-paper/575112fb5b" },
+            { title: "Using & Citing Sources", cat: "Research Skills", url: "https://ndla.no/r/engelsk-yf/how-to-use-evaluate-and-cite-sources/c2b2e98575" },
+            { title: "Presentations & Conversations Folder", cat: "Oral Skills", url: "https://ndla.no/e/engelsk-yf/presentations-conversations/57d2d4d21a" },
+            { title: "Checklist: Presentations", cat: "Oral Skills", url: "https://ndla.no/r/engelsk-yf/checklist-presentations/200d7edcca" },
+            { title: "How to Make Small Talk", cat: "Oral Skills", url: "https://ndla.no/r/engelsk-yf/how-to-make-small-talk/c69a526075" },
+            { title: "How to Stay on Top of an Argument", cat: "Oral Skills", url: "https://ndla.no/r/engelsk-yf/how-to-stay-on-top-of-an-argument/3d75e59f05" },
+            { title: "Literary Analysis Folder", cat: "Literature", url: "https://ndla.no/e/engelsk-yf/literary-analysis/3c6d336211" },
+            { title: "Working with Literature", cat: "Creative Tasks", url: "https://ndla.no/r/engelsk-yf/working-with-literature/c4c63077c6" },
+            { title: "How to Write a Book Report", cat: "Literature", url: "https://ndla.no/r/engelsk-yf/how-to-write-a-book-report/ab4a741829" },
+            { title: "How to Write a Film Review", cat: "Film", url: "https://ndla.no/r/engelsk-yf/how-to-write-a-film-review/1c0866871f" }
+        ];
+
+        const programSubjectData = [
+            { title: "Improving your language (Folder)", cat: "Language Skills", url: "https://ndla.no/en/e/english-1/improving-your-language/ce5b5de0e1", highlight: true },
+            { title: "Text Development (Folder)", cat: "Writing Skills", url: "https://ndla.no/en/e/english-1/text-development/24cadbca01", highlight: true },
+            { title: "Formal, Semi-formal, and Informal English", cat: "Style/Tone", url: "https://ndla.no/r/engelsk-1/formal-semi-formal-and-informal-english/9782eaac4c" },
+            { title: "Run-On Sentences & Comma Splices", cat: "Grammar/Punctuation", url: "https://ndla.no/r/engelsk-1/run-on-sentences-comma-splices-and-sentence-fragments/e02b2e87c8" },
+            { title: "Varying Your Sentence Structure", cat: "Writing Mechanics", url: "https://ndla.no/r/engelsk-1/varying-your-sentence-structure/42ca810171" },
+            { title: "Tasks: Varying Your Sentence Structure", cat: "Writing Tasks", url: "https://ndla.no/r/engelsk-1/tasks-varying-your-sentence-structure/49d4e289f8" },
+            { title: "Tasks: Using Linking Words", cat: "Cohesion", url: "https://ndla.no/r/engelsk-1/tasks-using-linking-words-in-your-writing/d4270bc334" },
+            { title: "Tasks: The Definite Article (the)", cat: "Grammar Tasks", url: "https://ndla.no/en/r/english-1/tasks-the-definite-article-the/1aceb2ca3c" },
+            { title: "Pronunciation Guide", cat: "Oral Skills", url: "https://ndla.no/en/r/engelsk-1/pronunciation/a01e17621e" },
+            { title: "Writing Introduction Paragraphs", cat: "Essay Writing", url: "https://ndla.no/r/engelsk-1/writing-introduction-paragraphs/dd09bcd39d" },
+            { title: "Writing Body Paragraphs", cat: "Essay Writing", url: "https://ndla.no/r/engelsk-1/writing-body-paragraphs/85dc122acd" },
+            { title: "Writing Conclusion Paragraphs", cat: "Essay Writing", url: "https://ndla.no/r/engelsk-1/writing-conclusion-paragraphs/c629c73cad" },
+            { title: "Tasks: Writing Conclusion Paragraphs", cat: "Writing Tasks", url: "https://ndla.no/en/r/english-1/tasks-writing-conclusion-paragraphs/71112835f2" },
+            { title: "Referencing Sources", cat: "Sources/Citation", url: "https://ndla.no/r/engelsk-1/referencing-sources/05bb98a4cb" },
+            { title: "Quoting Sources", cat: "Sources/Citation", url: "https://ndla.no/r/engelsk-1/quoting-sources/956f32a1aa" },
+            { title: "What is a Reliable Source?", cat: "Sources/Citation", url: "https://ndla.no/r/engelsk-1/what-is-a-reliable-source/b036797b30" },
+            { title: "Tips for the In-Depth Study Project", cat: "Study Skills", url: "https://ndla.no/r/engelsk-1/tips-for-the-in-depth-study-project/0b008e7f20" }
+        ];
+
+        const textbookData = [
+            // Improve Your Skills
+            { topic: "Learning Strategies", pages: "16" },
+            { topic: "Sharing Information: \"Show and Tell\"", pages: "44" },
+            { topic: "Writing a Report", pages: "60" },
+            { topic: "Giving Instructions", pages: "74" },
+            { topic: "Structuring Paragraphs", pages: "108" },
+            { topic: "Using Formal and Informal Language", pages: "122" },
+            { topic: "Selecting Sources", pages: "146" },
+            { topic: "Structuring a Text", pages: "174" },
+            { topic: "Listening Strategies", pages: "210" },
+            { topic: "Giving a Presentation", pages: "232" },
+            { topic: "Writing a Formal Text", pages: "254" },
+            { topic: "Discussing Vocational Topics", pages: "266" },
+            { topic: "Discussing Literature and Film", pages: "302" },
+            { topic: "Summarizing and Synthesizing Information", pages: "332" },
+            { topic: "Arguing a Case", pages: "358" },
+            { topic: "Referring to Sources", pages: "372" },
+            
+            // Language Lab
+            { topic: "Articles & Nouns (Proper, Plural)", pages: "400–401" },
+            { topic: "Genitive", pages: "403" },
+            { topic: "Verbs (Present Tense, Concord)", pages: "404–405" },
+            { topic: "The Past Tense (Simple, Continuous, Perfect)", pages: "406–407" },
+            { topic: "Imperative & Modal Auxiliary Verbs", pages: "408" },
+            { topic: "Active/Passive Voice & Gerund", pages: "409" },
+            { topic: "Adjectives (Comparison, Order)", pages: "410–411" },
+            { topic: "Adverbs & Prepositions", pages: "412–413" },
+            { topic: "Pronouns (Personal, Possessive, Reflexive, Relative)", pages: "415–417" },
+            { topic: "Determiners (Demonstratives, Quantifiers)", pages: "418" },
+            { topic: "Spelling & Commonly Confused Words", pages: "419–421" },
+            { topic: "Word Formation & Morphology", pages: "422–423" },
+            { topic: "Punctuation", pages: "424–425" },
+            { topic: "Direct and Indirect Speech", pages: "426" },
+            { topic: "Word Order", pages: "427–428" },
+            { topic: "Modifiers", pages: "428" },
+            { topic: "Pronunciation (Vowels, Consonants)", pages: "428–429" },
+            { topic: "Intonation & Accents", pages: "430" }
+        ];
+
+        // Function to render rows
+        function renderRows(data, tableId) {
+            const tbody = document.getElementById(tableId);
+            tbody.innerHTML = "";
+            data.forEach(item => {
+                const tr = document.createElement("tr");
+                tr.className = `hover:bg-indigo-50 transition-colors border-b last:border-0 ${item.highlight ? 'bg-indigo-50 border-indigo-200' : ''}`;
+                
+                if (tableId === 'textbookTable') {
+                     tr.innerHTML = `
+                        <td class="px-6 py-4 font-medium text-gray-800">
+                            ${item.topic}
+                        </td>
+                        <td class="px-6 py-4">
+                            <span class="bg-red-100 text-red-800 text-sm font-semibold px-3 py-1 rounded-full">
+                                pp. ${item.pages}
+                            </span>
+                        </td>
+                    `;
+                } else {
+                    tr.innerHTML = `
+                        <td class="px-6 py-4 font-medium ${item.highlight ? 'text-indigo-800 font-bold' : 'text-gray-800'}">
+                            ${item.title}
+                        </td>
+                        <td class="px-6 py-4 text-sm text-gray-500">
+                            <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs uppercase tracking-wide font-semibold">${item.cat}</span>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="flex items-center gap-2">
+                            <span class="font-mono text-xs md:text-sm text-indigo-600 break-all select-all cursor-text bg-gray-50 px-2 py-1 rounded border border-gray-200 w-full">
+                                ${item.url}
+                            </span>
+                            <a href="${item.url}" target="_blank" title="Open Link" class="text-gray-400 hover:text-indigo-600 transition-colors">
+                                    <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            </div>
+                        </td>
+                    `;
+                }
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Render all tables on load
+        document.addEventListener('DOMContentLoaded', () => {
+            renderRows(vocationalGrammarData, "vocationalGrammarTable");
+            renderRows(communicationData, "communicationTable");
+            renderRows(programSubjectData, "programSubjectTable");
+            renderRows(textbookData, "textbookTable");
+        });
+
+        // Simple Filter Function
+        function filterTable() {
+            const input = document.getElementById("searchInput");
+            const filter = input.value.toUpperCase();
+            const tables = ["vocationalGrammarTable", "communicationTable", "programSubjectTable", "textbookTable"];
+
+            tables.forEach(tableId => {
+                const table = document.getElementById(tableId);
+                const tr = table.getElementsByTagName("tr");
+
+                for (let i = 0; i < tr.length; i++) {
+                    const tds = tr[i].getElementsByTagName("td");
+                    let found = false;
+                    
+                    for (let j = 0; j < tds.length; j++) {
+                        if (tds[j]) {
+                            const txtValue = tds[j].textContent || tds[j].innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                found = true;
+                                break;
+                            }
+                        }
+                    }
+                    
+                    if (found) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
